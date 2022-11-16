@@ -1,21 +1,18 @@
-//Declare Variables
+//DECLARING ALL VARIABLES
 var characterLength = 0;
 var choiceArray = [];
-
 var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var specialCharacterArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "|", "?", "/", "<", ">"];
 var numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
-// Get references to the #generate element
+//Generating Button
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button
+//Add Event Listen FOR BUTTON
 generateBtn.addEventListener("click", writePassword);
 
-
-
-
+// GENERATES PROMPTS
 function generatePrompts(){
   choiceArray = choiceArray.concat(lowerCaseArray);
 
@@ -36,7 +33,6 @@ function generatePrompts(){
   }
   return true;
 }
-
 //Generate Password
 function generatePassword() {
   var password = "";
@@ -47,7 +43,7 @@ function generatePassword() {
   return password;
 }
 
-// Write password to the #password input
+// Writes password to the #password input
 function writePassword() {
   var correctPrompts = generatePrompts();
   
@@ -60,3 +56,4 @@ function writePassword() {
   }
   
 }
+
